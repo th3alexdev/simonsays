@@ -26,9 +26,48 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    
+    <main id="main" class="main">
+        <!-- home -->
+        <section id="home" class="home">
+            <div class="home-container">
+                <h1 class="text text--title">Welcome to <span class="text text--colorfull">Simon Says</span>! The game where you have to follow Simon's instructions or you will lose.</h1>
+
+                <h2 class="text text--subtitle">Are you ready to test your memory and speed? Have fun with Simon!</h2>
+                <a href="#" class="btn btn--start">Start</a>
+            </div>
+        </section>
+
+        <!-- game -->
+        <section id="game" class="game">
+            <div class="simon-btns-panel">
+                <label for="green-btn">
+                    <button id="green-btn" class="simon-btn green" data-color="green" data-id="1"></button>
+                </label>
+
+                <label for="red">
+                    <button id="red-btn" class="simon-btn red" data-color="red" data-id="2"></button>
+                </label>
+
+                <label for="yellow">
+                    <button id="yellow-btn" class="simon-btn yellow" data-color="yellow" data-id="3"></button>
+                </label>
+
+                <label for="blue">
+                    <button id="blue-btn" class="simon-btn blue" data-color="blue" data-id="4"></button>
+                </label>
+            </div>
+        </section>
+    </main>
+    
 
 
     <!-- js -->
+    
     <script src="js/index.js"></script>
 </body>
 </html>
+
+<!-- Por lo tanto, te recomiendo que crees un archivo aparte que contenga la lógica del juego de Simon Dice. Este archivo puede tener diferentes nombres, como game.js o simon.js, y puede contener todas las funciones y variables relacionadas con el juego, como la lógica de los botones, la generación de secuencias, la comprobación de la entrada del usuario, etc.
+
+Por otro lado, el archivo index.js debería contener principalmente la funcionalidad relacionada con la manipulación del DOM y la interacción con los elementos de la página web. Esto incluiría la creación de los botones, la respuesta a los eventos de clic del usuario, l -->
