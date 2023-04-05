@@ -193,7 +193,7 @@ function handleUserInput(e) { // Función llamada cada vez que se presiona un bo
 
       if(e.target.dataset.id != sequence[steps]) { // Si el elemento dataset id del botón clickeado no coincide con el siguiente elemento de la secuencia generada
 
-            console.log('%cYou Lose!', 'color: red;');
+            // console.log('%cYou Lose!', 'color: red;');
             lose = true 
             showGameOverMessage()
 
@@ -258,9 +258,9 @@ function startGame() { // Función que inicia el juego
     sequence = generateSimonSequence(); // Genera una nueva secuencia para el juego
     showSimonSequence(); // Muestra la secuencia generada en los botones del juego
 
-    console.log(`sequence: `, sequence)
-    console.log(`userSequence: `, userSequence)
-    console.log("---")
+    // console.log(`sequence: `, sequence)
+    // console.log(`userSequence: `, userSequence)
+    // console.log("---")
     simonPanel.addEventListener('click', (e) => { // Escucha si el panel de Simon para detectar cuando el usuario haga clic en un botón
       
       if(lose || showingSequence || win) { // Si el usuario ya perdió, los botones se bloquearán
@@ -346,10 +346,10 @@ function resetGame() { // Función que restablece el juego a su estado inicial c
     showSimonSequence(); // Muestra la nueva secuencia 
   }, 1000);
   
-  console.clear()
-  console.log(`sequence: `, sequence)
-  console.log(`userSequence: `, userSequence)
-  console.log("---")
+  // console.clear()
+  // console.log(`sequence: `, sequence)
+  // console.log(`userSequence: `, userSequence)
+  // console.log("---")
 
   lose = false; // Reinicia el estado al haber perdido
   steps = 0;
