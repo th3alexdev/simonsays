@@ -1,0 +1,19 @@
+@use "../utils/variables" as v;
+@use "../utils/functions" as f;
+
+
+.icon {
+    cursor: pointer;
+    z-index: 50;
+    position: relative;
+
+    &--reset {
+        transition: transform .3s;
+    }
+}
+
+.btn-principal--game:hover{
+    .icon--reset {
+        transform: rotate(15deg) scale(125%);
+    }
+}

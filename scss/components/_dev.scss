@@ -1,0 +1,47 @@
+@use "../utils/variables" as v;
+@use "../utils/functions" as f;
+
+.dev {
+    z-index: 999;
+    color: #222;
+    position: absolute;
+    bottom: 55px;
+    right: 50px;
+    height: 50px;
+    display: flex;
+    gap: 8px;
+
+    &-info-container {
+        width: max-content;
+        height: 50px;
+    }
+
+    @media (max-width: 900px) {
+        bottom: 30px;
+        right: 30px;
+    }
+}
+
+.dev {
+    &-info {
+        width: 40px;
+        height: 25px;
+        padding: 1px 5px;
+        background-color: f.getColor('yellow-contrast');
+        display: grid;
+        place-items: center;
+    }
+    
+    &-user {
+        width: 100px;
+        height: 25px;
+        background-color: #fff;
+        display: grid;
+        place-items: center;
+    }
+}
+
+.img--dev {
+    width: 50px
+}
+

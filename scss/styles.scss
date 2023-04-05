@@ -1,3 +1,14 @@
 
 @forward 'base/base';
 @forward 'base/typography';
+
+@forward 'layout/main';
+@forward 'pages/home';
+@forward 'pages/game';
+
+@forward 'components/simon-panel';
+@forward 'components/btns';
+@forward 'components/dev';
+@forward 'components/imgs';
+@forward 'components/icons';
+@forward 'components/animations'

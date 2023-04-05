@@ -1,0 +1,33 @@
+@use "../utils/variables" as v;
+@use "../utils/functions" as f;
+
+.img-game {
+    -webkit-user-drag: none;
+    position: absolute;
+
+    &--bottom-right {
+        z-index: 200;
+        bottom: 0;
+        right: -35px;
+
+        @media (min-width: 900px) {
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+    &--bottom-left {
+        z-index: 200;
+  
+        bottom: -200px;
+        left: -150px;
+        width: 350px;
+
+        @media (min-width: 900px) {
+           bottom: -210px;
+           left: -300px;
+           width: 500px;
+        }
+    }
+}
+// img--bottom-right

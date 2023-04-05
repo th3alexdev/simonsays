@@ -1,0 +1,353 @@
+@use "../utils/variables" as v;
+@use "../utils/functions" as f;
+
+$green: map-get(v.$game-palette, 'green');
+$red: map-get(v.$game-palette, 'red');
+$yellow: map-get(v.$game-palette, 'yellow');
+$blue: map-get(v.$game-palette, 'blue');
+
+
+@media(max-width: 899px) {  
+    $border-radius: 10px
+}
+
+@media(min-width: 900px) {  
+    $border-radius: 15px
+}
+
+.simon-btns-panel{
+    position: relative;
+    
+    width: 85vw;
+    max-width: 460px;
+    min-width: 330px;
+
+    height: 85vw;
+    max-height: 460px;
+    min-height: 350px;
+
+    @media (min-width: 900px) {
+        max-height: 500px;
+        max-width: 500px;
+    }
+    
+    border-radius: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: f.getColor('bg-color');
+
+    &::before {
+        z-index: 50;
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 50%;
+        width: 25%;
+        height: 25%;
+        background-color: f.getColor('bg-color');
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+    }
+}
+
+.simon-btn {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+
+    cursor: pointer;
+    transition: background-color .5s, box-shadow .5s;
+
+    &--disable {
+        cursor: not-allowed;
+
+    }
+    &-label {
+        flex-shrink: 1;
+        flex-basis: 50%;
+
+        // @media (min-width: 900px) {
+        //     flex-basis: 250px;
+        // }
+    }
+}
+
+
+.green {
+    background-color: f.getColor('green');
+    
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 40px;
+    border-top-left-radius: 100%;  
+
+    @media (min-width: 900px) {
+        border-top-right-radius: v.$border-radius;
+        border-bottom-left-radius: v.$border-radius;
+        border-bottom-right-radius: 100px;
+    }
+
+    &:hover {
+        border: 2px solid lighten($green, 10%);
+        background-color: lighten($green, 10%);
+        box-shadow: -2px -2px 5px 0 lighten($green, 10%);
+    }
+}
+
+.red {
+    background-color: f.getColor('red');
+
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 100%;
+
+    @media (min-width: 900px) {
+        border-top-left-radius: v.$border-radius;
+        border-bottom-right-radius: v.$border-radius;
+        border-bottom-left-radius: 100px;
+    }
+
+
+    &:hover {
+        border: 2px solid lighten($red, 10%);
+        background-color: lighten($red, 10%);
+        box-shadow: 2px -2px 5px 0 lighten($red, 10%);
+    }
+}
+
+.yellow {
+    background-color: f.getColor('yellow');
+
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 100%;
+
+    @media (min-width: 900px) {
+        border-top-left-radius: v.$border-radius;
+        border-bottom-right-radius: v.$border-radius;
+        border-top-right-radius: 100px;
+    }
+
+    &:hover {
+        border: 2px solid lighten($yellow, 10%);
+        background-color: lighten($yellow, 10%);
+        box-shadow: -2px 2px 5px 0 lighten($yellow, 10%);
+    }
+}
+
+.blue {
+    background-color: f.getColor('blue');
+
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 100%;
+
+    @media (min-width: 900px) {
+        border-top-right-radius: v.$border-radius;
+        border-bottom-left-radius: v.$border-radius;
+        border-top-left-radius: 100px;
+    }
+
+    &:hover {
+        border: 2px solid lighten($blue, 10%);
+        background-color: lighten($blue, 10%);
+        box-shadow: 2px 2px 5px 0 lighten($blue, 10%);
+    }
+}
+
+.divider-v {
+    z-index: 45;
+    position: absolute;
+    left: 50%;
+    width: 5px;
+    height: 100%;
+    background-color: f.getColor('bg-color');
+    transform: translateX(-50%);
+    
+
+    @media (min-width: 900px) {
+        width: 10px;
+        transform: translateX(-50%);
+    }
+
+}
+
+.divider-h {
+    z-index: 45;
+    position: absolute;
+    bottom: 50%;
+    width: 100%;
+    height: 5px;
+    background-color: f.getColor('bg-color');
+    transform: translateY(50%);
+
+    @media (min-width: 900px) {
+        height: 10px;
+        transform: translateY(50%);
+    }
+
+
+}
+
+
+
+.green-active {
+    border: 2px solid lighten($green, 10%);
+    background-color: lighten($green, 10%);
+    box-shadow: -2px 2px 5px 0 lighten($green, 10%);
+    // outline: 50px solid #fff;
+}
+
+
+.red-active {
+    border: 2px solid lighten($red, 10%);
+    background-color: lighten($red, 10%);
+    box-shadow: 2px -2px 5px 0 lighten($red, 10%);
+    // outline: 50px solid #fff;
+}
+.yellow-active {
+    border: 2px solid lighten($yellow, 10%);
+    background-color: lighten($yellow, 10%);
+    box-shadow: -2px 2px 5px 0 lighten($yellow, 10%);
+    // outline: 50px solid #fff;
+}
+.blue-active {
+    border: 2px solid lighten($blue, 10%);
+    background-color: lighten($blue, 10%);
+    box-shadow: 2px 2px 5px 0 lighten($blue, 10%);
+    // outline: 50px solid #fff;
+}
+
+
+
+.bg-btn-panel {
+    position: absolute;
+    width: 50vw;
+    height: 50%;
+    filter: opacity(30%)
+}
+
+
+.bg-green {
+    top: 0; 
+    left:0;
+    background-color: lighten($green, 10%);
+}
+
+.bg-red {
+    top: 0; 
+    right: 0;
+    background-color: lighten($red, 10%);
+}
+
+.bg-yellow {
+    bottom: 0; 
+    left: 0;
+    background-color: lighten($yellow, 10%);
+}
+
+
+.bg-blue {
+    bottom: 0; 
+    right: 0;
+    background-color: lighten($blue, 10%);
+}
+
+
+.simon-score-panel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 500;
+    width: 120px;
+    height: 120px;
+    transform: translate(-50%, -50%);
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    font-size: 3rem;
+    
+}
+
+
+.reset-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: max-content;
+    display: none;
+
+    @media (max-width: 418px) {
+        transform: translateY(480%);
+    }
+
+    @media (min-width: 419px) and (max-width: 500px) {
+        transform: translateY(584%);
+    }    
+
+    @media (min-width: 500px) and (max-width: 550px) {
+        transform: translateY(615%);
+    }    
+
+    @media (min-width: 551px) and (max-width: 899px) {
+        transform: translateY(480px);
+
+    }
+    
+    @media (min-width: 900px) {
+        transform: translateY(550px);
+    }
+}
+
+.reset-panel-active {
+    display: grid;
+    place-items: center;
+}
+
+
+.status-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: max-content;
+    text-align: center;
+    transform: translateY(-75px);
+    font-size: 2rem;
+    font-family:  "Consolas", monospace;
+    font-weight: 700;
+
+    text-shadow: 0px 2px 10px rgba($color: #000, $alpha: .5);
+    display: none;
+
+    @media (min-width: 900px) {
+        transform: translateY(-120px);
+        font-size: 3.5rem;
+    }
+
+    &--active {
+        display: block;
+        animation-name: pop-up;
+        animation-duration: .2s;
+        animation-timing-function: ease-in-out;
+        animation-direction: initial;
+    }
+}
+
+@keyframes pop-up {
+    0% {
+        transform: translateY(-120px) scale(0%);
+    }
+    100% {
+        transform: translateY(-120px) scale(100%);
+    }
+}

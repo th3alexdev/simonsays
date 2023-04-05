@@ -1,0 +1,48 @@
+@use "../utils/variables" as v;
+@use "../utils/functions" as f;
+
+.title, .btn-principal {
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-name: showElement;
+    animation-duration: .5s;
+
+    filter: opacity(0);
+}
+
+.title {
+    &--principal {
+        animation-delay: .2s;
+    }
+
+    &--secondary {
+        animation-name: showElementSecondary;
+        animation-delay: .4s;
+    }
+}
+
+.btn-principal {
+    animation-delay: .6s;
+}
+
+@keyframes showElement {
+    0% {
+        filter: opacity(0) blur(10px);
+        transform: translateY(-10px)
+    }
+    100% {
+        filter: opacity(1) blur(0px);
+        transform: translateY(0px)
+    }
+}
+
+@keyframes showElementSecondary {
+    0% {
+        filter: opacity(0%) blur(10px);
+        transform: translateY(-10px)
+    }
+    100% {
+        filter: opacity(85%) blur(0px);
+        transform: translateY(0px)
+    }
+}

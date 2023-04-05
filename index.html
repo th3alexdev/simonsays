@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- SEO -->
+    <meta name="description" content="Play Simon Says, a classic memory game in which you have to repeat a sequence of colors.">
+    <meta name="keywords" content="Simon Says, memory game, colors">
+    <meta name="author" content="Alexander Pérez">
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,52 +27,133 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
+    <!-- Howler.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js" integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
     <!-- css -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.min.css">
+     <!-- <link rel="stylesheet" href="src/css/styles.css">  -->
+
 </head>
 <body>
-    
+
     <main id="main" class="main">
         <!-- home -->
-        <section id="home" class="home">
+        <section id="home" class="home principal ">
             <div class="home-container">
-                <h1 class="text text--title">Welcome to <span class="text text--colorfull">Simon Says</span>! The game where you have to follow Simon's instructions or you will lose.</h1>
+                
+                <h1 class="title title--principal hiddenElement">Welcome to 
+                    <div class="colorfull-content">
+                        <span>S</span><span>i</span><span>m</span><span>o</span><span>n</span><span>S</span><span>a</span><span>y</span><span>s</span> 
+                    </div>!
+                    The game where you have to follow Simon's instructions or you will lose.</h1>
 
-                <h2 class="text text--subtitle">Are you ready to test your memory and speed? Have fun with Simon!</h2>
-                <a href="#" class="btn btn--start">Start</a>
+                <h2 class="title title--secondary">Are you ready to test your memory and speed? Have fun with Simon!</h2>
+                
+                <a id="btnStart" href="#" class="btn btn-principal btn--principal ">
+                    <span class="btn__text">Start</span>
+                    <svg viewBox="-5 -5 110 110" preserveAspectRatio="none" aria-hidden="true">
+                      <path d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0"/>
+                    </svg>
+                </a>
             </div>
         </section>
 
         <!-- game -->
-        <section id="game" class="game">
-            <div class="simon-btns-panel">
-                <label for="green-btn">
-                    <button id="green-btn" class="simon-btn green" data-color="green" data-id="1"></button>
-                </label>
+        <section id="game" class="game principal hidden"> <!-- ! -->
+            <div class="score">
+                <div class="score-panel-container">
+                    <div class="score-panel-layout">
+                        <div class="score-panel score-panel--label">
+                            <p class="text text--score-panel-label">Level: </p>
+                        </div>
+    
+                        <div class="score-panel score-panel--value ">
+                            <p class="text">#</p>
+                        </div>
+                    </div>
+                    <div class="score-panel-layout">
+                        <div class="score-panel score-panel--label">
+                            <p class="text text--score-panel-label">High Score: </p>
+                        </div>
+    
+                        <div class="score-panel score-panel--value">
+                            <p class="text" id="highScore">0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                <label for="red">
-                    <button id="red-btn" class="simon-btn red" data-color="red" data-id="2"></button>
-                </label>
+            <div class="game-container">
 
-                <label for="yellow">
-                    <button id="yellow-btn" class="simon-btn yellow" data-color="yellow" data-id="3"></button>
-                </label>
+                <div class="bg-btn-panel" data-id="1"></div>
+                <div class="bg-btn-panel" data-id="2"></div>
+                <div class="bg-btn-panel" data-id="3"></div>
+                <div class="bg-btn-panel" data-id="4"></div>
+    
+                <div id="simonPanel" class="simon-btns-panel">
+                    <div id="statusPanel" class="status-panel">
+                        <p id="textStatus" class="text "></p>
+                    </div>
+                    <div class="divider-v"></div>
+                    <div class="divider-h"></div>
+                    <div class="simon-score-panel">
+                        <p id="score">0</p>
+                    </div>
+    
+                    <label class="simon-btn-label" for="green-btn">
+                        <button class="simon-btn green" data-color="green" data-id="1"></button>
+                    </label>
+    
+    
+                    <label class="simon-btn-label" for="red">
+                        <button class="simon-btn red" data-color="red" data-id="2"></button>
+                    </label>
+    
+    
+                    <label class="simon-btn-label" for="yellow">
+                        <button class="simon-btn yellow" data-color="yellow" data-id="3"></button>
+                    </label>
+    
+    
+                    <label class="simon-btn-label" for="blue">
+                        <button class="simon-btn blue" data-color="blue" data-id="4"></button>
+                    </label>
 
-                <label for="blue">
-                    <button id="blue-btn" class="simon-btn blue" data-color="blue" data-id="4"></button>
-                </label>
+                    <div id="resetPanel" class="reset-panel ">
+                        <div class="">
+                            <a id="btnReset" href="#" class="btn btn-principal btn-principal--game ">
+                                <!-- <span class="btn__text">Reset</span> -->
+                                <img src="assets/icons/reset.svg" alt="Reset game button" class="icon icon--reset">
+                                <svg viewBox="-5 -5 110 110" preserveAspectRatio="none" aria-hidden="true">
+                                    <path d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
+        <div class="dev">
+            <div class="dev-pic-container">
+                <img src="https://avatars.githubusercontent.com/u/55007470?v=4" alt="Alex Github profile image" class="img img--dev">
+            </div>
+            <div class="dev-info-container">
+                <div class="dev-info"><p class="text text--dev-regular">DEV</p></div>
+                <div class="dev-user"><p class="text text--dev-user"><a target="_blank" href="https://github.com/th3alexdev">@th3alexdev</a></p></div>
+            </div>
+        </div>
+        <img src="assets/svg/game_bottom-left.svg" alt="simon says game png image" class="img-game img-game--bottom-left">
+        <img src="assets/svg/game_bottom-right.svg" alt="simon says game png image" class="img-game img-game--bottom-right">
+        
     </main>
-    
-
 
     <!-- js -->
-    
     <script src="js/index.js"></script>
+    <script src="js/simon.js"></script>
 </body>
 </html>
-
-<!-- Por lo tanto, te recomiendo que crees un archivo aparte que contenga la lógica del juego de Simon Dice. Este archivo puede tener diferentes nombres, como game.js o simon.js, y puede contener todas las funciones y variables relacionadas con el juego, como la lógica de los botones, la generación de secuencias, la comprobación de la entrada del usuario, etc.
-
-Por otro lado, el archivo index.js debería contener principalmente la funcionalidad relacionada con la manipulación del DOM y la interacción con los elementos de la página web. Esto incluiría la creación de los botones, la respuesta a los eventos de clic del usuario, l -->

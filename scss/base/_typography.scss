@@ -1,2 +1,146 @@
 @use "../utils/variables" as v;
 @use "../utils/functions" as f;
+
+.title {
+
+    &--principal {
+        position: relative;
+        margin-bottom: 55px;
+
+        font-size: 1.4rem;
+        line-height: 25px;
+
+        font-weight: 600;
+        display: inline-block;
+        max-width: 80%;
+
+        @media (min-width: 900px) {
+            font-size: 2.5rem;
+            line-height: 45px;
+        }
+
+    }
+
+    &--secondary {
+        width: 100%;
+        font-weight: 500;
+        max-width: 350px;
+        margin-bottom: 20px;
+        filter: opacity(90%);
+        transition: filter .3s;
+        font-family: "Inter";
+        font-size: 1rem;
+
+        // &:hover {
+        //     filter: opacity(100%);
+        // }
+
+        @media (min-width: 900px) {
+            font-size: 1.5rem;
+            max-width: 600px;
+
+        }
+    }
+}
+
+.title--principal {
+
+    &::after {
+        position: absolute;
+        z-index: -100;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        // background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='120' height='30' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(214, 55%, 17%, 1)'/><path d='M-50.129 12.685C-33.346 12.358-16.786 4.918 0 5c16.787.082 43.213 10 60 10s43.213-9.918 60-10c16.786-.082 33.346 7.358 50.129 7.685'  stroke-width='2' stroke='hsla(214, 60%, 25%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+        // background-repeat: no-repeat;
+        // transform: translateY(25%);
+    }
+}
+
+.colorfull-content {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        z-index: -50;
+        content: "";
+        top: -35px;
+        left: -170px;
+        width: 160px;
+        height: 160px;
+        background-image: url("/assets/svg/game_text-back.svg");
+        background-repeat: no-repeat;
+        filter: opacity(50%);
+
+        @media (max-width: 900px) {
+            left: -140px;
+        }
+    }
+}
+
+.text {
+    display: inline-block;
+
+    &--score-panel-label {
+        font-weight: 600;
+    }
+
+    &--dev-regular {
+        color: #222;
+        font-size: .8rem;
+        font-weight: 800;
+    }
+    &--dev-user {
+        color: #222;
+        font-size: .8rem;
+    }
+
+    &--lose {
+        color: #f00;
+    }
+    &--win {
+        color: #0f0
+    }
+}
+
+
+.colorfull-content {
+    display: inline-block;
+
+    :first-child {
+        color: f.getColor('green');
+    }
+
+    :nth-child(2) {
+        color: f.getColor('yellow');
+    }
+
+    :nth-child(3) {
+        color: f.getColor('blue');
+    }
+
+    :nth-child(4) {
+        color: f.getColor('red');
+    }
+
+    :nth-child(5) {
+        color: f.getColor('green');
+        margin-right: 5px;
+    }
+
+    :nth-child(6) {
+        color: f.getColor('yellow');
+    }
+    :nth-child(7) {
+        color: f.getColor('blue');
+    }
+    :nth-child(8) {
+        color: f.getColor('red');
+    }
+    :nth-child(9){
+        color: f.getColor('yellow');
+    }
+}
+

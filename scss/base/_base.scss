@@ -9,4 +9,60 @@
     @each $name, $color in v.$theme-default {
         --color-#{$name}: #{$color};
     }
+    @each $name, $color in v.$game-palette {
+      --color-#{$name}: #{$color};
+   } 
 }
+
+
+body {
+    margin: 0;
+    color: #fff;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 400;
+    background-color: f.getColor("bg-color");
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  ul,
+  ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin: 0;
+  }
+  
+  p {
+    margin: 0;
+  }
+  
+  input, input:focus {
+    outline: none; 
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  button {
+    border:none
+  }
+  
+  a, a:visited {
+    color: inherit;
+  }
+  
+  
