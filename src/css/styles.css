@@ -115,7 +115,7 @@ a, a:visited {
   left: -170px;
   width: 160px;
   height: 160px;
-  background-image: url("/assets/svg/game_text-back.svg");
+  background-image: url("../assets/svg/game_text-back.svg");
   background-repeat: no-repeat;
   filter: opacity(50%);
 }
