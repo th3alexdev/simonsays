@@ -280,25 +280,25 @@ let sfx = { // Define un objeto llamado sfx que contiene los sonidos de los boto
   greenButton: new Howl({
 
     src: [ // Define la fuente del sonido para el botón verde
-      '..https://th3alexdev.github.io/simonsaysapp/assets/sounds/simonSound1.mp3'
+      'https://th3alexdev.github.io/simonsaysapp/assets/sounds/simonSound1.wav'
     ],
     pool: 5 // Define la cantidad de instancias que pueden ser reproducidas simultáneamente
   }),
   redButton: new Howl({
     src: [
-      '..https://th3alexdev.github.io/simonsaysapp/assets/sounds/simonSound2.mp3'
+      'https://th3alexdev.github.io/simonsaysapp/assets/sounds/simonSound2.wav'
     ],
     pool: 5
   }),
   yellowButton: new Howl({
     src: [
-      '..https://th3alexdev.github.io/simonsaysapp/assets/sounds/simonSound3.mp3'
+      'https://th3alexdev.github.io/simonsaysapp/assets/sounds/simonSound3.wav'
     ],
     pool: 5
   }),
   blueButton: new Howl({
     src: [
-      '..https://th3alexdev.github.io/simonsaysapp/assets/sounds/simonSound4.mp3'
+      'https://th3alexdev.github.io/simonsaysapp/assets/sounds/simonSound4.wav'
     ],
     pool: 5
   }),
@@ -310,7 +310,7 @@ let sfx = { // Define un objeto llamado sfx que contiene los sonidos de los boto
   }),
   levelPassed: new Howl({
     src: [
-      '..https://th3alexdev.github.io/simonsaysapp/assets/sounds/level-passed.mp3'
+      'https://th3alexdev.github.io/simonsaysapp/assets/sounds/level-passed.wav'
     ],
     pool: 5
   }),
