@@ -27,7 +27,7 @@ I accept contributions in the form of bug fixes and code improvements. If you wa
 
 ## Crédits
 
-* Game sounds are handled with the help of the [Howler.js](https://howlerjs.com/) library."
+* Game sounds are handled with the help of the [Howler.js](https://howlerjs.com/) library.
 
 
 ## About the creator
