@@ -17,9 +17,9 @@ In order to play the game, the player must wait for a sequence of colors and sou
 
 ## Screenshots
 
-![Simon Says screenshot 1](https://th3alexdev.github.io/simonsaysapp/assets/img/simonsays2.png)
+![Simon Says screenshot 1](https://th3alexdev.github.io/simonsaysapp/assets/img/simonsays2.jpg)
 
-![Simon Says screenshot 2](https://th3alexdev.github.io/simonsaysapp/assets/img/simonsays3.png)
+![Simon Says screenshot 2](https://th3alexdev.github.io/simonsaysapp/assets/img/simonsays3.jpg)
 
 ## Contributions
 
