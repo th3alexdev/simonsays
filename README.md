@@ -30,9 +30,9 @@ I accept contributions in the form of bug fixes and code improvements. If you wa
 * Game sounds are handled with the help of the [Howler.js](https://howlerjs.com/) library."
 
 
-## Sobre el creador
+## About the creator
 
-My name is *** Alexander Pérez *** and I am the creator of this game. I am a web developer with a passion for creating fun and interactive experiences for users. If you have any questions or suggestions about the game, do not hesitate to contact me through my social networks:
+My name is **Alexander Pérez** and I am the creator of this game. I am a web developer with a passion for creating fun and interactive experiences for users. If you have any questions or suggestions about the game, do not hesitate to contact me through my social networks:
 - 🐤 [Twitter](https://twitter.com/th3alexdev) 
 - ‍💼 [LinkedIn](https://www.linkedin.com/in/alexander-p%C3%A9rez-graterol-b60b26265/?original_referer=)
 - 🚀 [GitHub](https://github.com/th3alexdev)
