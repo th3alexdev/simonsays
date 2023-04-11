@@ -1,4 +1,5 @@
-
+node_modules/
+assets/_MACOSX
 assets/sounds - Copy/error.wav
 assets/sounds - Copy/level-passed.mp3
 assets/sounds - Copy/simonSound1.mp3
