@@ -180,12 +180,6 @@ function showSimonSequence() { // Recorre la secuencia 'userSequence' para mostr
 }
 
 
-// ! Falta: //
-// ? Que no se puedan presionar botones mientras se ejecuta
-// ? Que no se puedan presionar botones mientras se ejecuta
-
-
-
 function handleUserInput(e) { // Función llamada cada vez que se presiona un botón del juego
 
     if(e.target.tagName == 'BUTTON') { // Verifica el elemento clickeado es un botón 
@@ -280,37 +274,37 @@ let sfx = { // Define un objeto llamado sfx que contiene los sonidos de los boto
   greenButton: new Howl({
 
     src: [ // Define la fuente del sonido para el botón verde
-      'https://th3alexdev.github.io/simonsaysapp/assets/sounds/simonSound1.wav'
+      'https://th3alexdev.github.io/simonsays/assets/sounds/simonSound1.wav'
     ],
     pool: 5 // Define la cantidad de instancias que pueden ser reproducidas simultáneamente
   }),
   redButton: new Howl({
     src: [
-      'https://th3alexdev.github.io/simonsaysapp/assets/sounds/simonSound2.wav'
+      'https://th3alexdev.github.io/simonsays/assets/sounds/simonSound2.wav'
     ],
     pool: 5
   }),
   yellowButton: new Howl({
     src: [
-      'https://th3alexdev.github.io/simonsaysapp/assets/sounds/simonSound3.wav'
+      'https://th3alexdev.github.io/simonsays/assets/sounds/simonSound3.wav'
     ],
     pool: 5
   }),
   blueButton: new Howl({
     src: [
-      'https://th3alexdev.github.io/simonsaysapp/assets/sounds/simonSound4.wav'
+      'https://th3alexdev.github.io/simonsays/assets/sounds/simonSound4.wav'
     ],
     pool: 5
   }),
   error: new Howl({
     src: [
-      'https://th3alexdev.github.io/simonsaysapp/assets/sounds/error.wav'
+      'https://th3alexdev.github.io/simonsays/assets/sounds/error.wav'
     ],
     pool: 5
   }),
   levelPassed: new Howl({
     src: [
-      'https://th3alexdev.github.io/simonsaysapp/assets/sounds/level-passed.wav'
+      'https://th3alexdev.github.io/simonsays/assets/sounds/level-passed.wav'
     ],
     pool: 5
   }),
