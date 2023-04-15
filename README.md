@@ -4,7 +4,7 @@
 Simon Says is a memory game in which the player must repeat a sequence of colors and sounds randomly throughout the game. The game consists of four colored buttons (red, green, yellow and blue) that light up and sound in a longer and longer sequence.
 
 
-![Simon Says home screenshot](https://th3alexdev.github.io/simonsaysapp/assets/img/simonsays.png)
+![Simon Says home screenshot](https://th3alexdev.github.io/simonsays/assets/img/simonsays.png)
 
 
 ## How to play?
@@ -17,9 +17,9 @@ In order to play the game, the player must wait for a sequence of colors and sou
 
 ## Screenshots
 
-![Simon Says screenshot 1](https://th3alexdev.github.io/simonsaysapp/assets/img/simonsays2.jpg)
+![Simon Says screenshot 1](https://th3alexdev.github.io/simonsays/assets/img/simonsays2.jpg)
 
-![Simon Says screenshot 2](https://th3alexdev.github.io/simonsaysapp/assets/img/simonsays3.jpg)
+![Simon Says screenshot 2](https://th3alexdev.github.io/simonsays/assets/img/simonsays3.jpg)
 
 ## Contributions
 
